@@ -7,6 +7,7 @@ import com.example.android.dagger.registration.RegistrationActivity
 import com.example.android.dagger.registration.RegistrationComponent
 import com.example.android.dagger.registration.enterdetails.EnterDetailsFragment
 import com.example.android.dagger.registration.termsandconditions.TermsAndConditionsFragment
+import com.example.android.dagger.settings.SettingsActivity
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
@@ -27,4 +28,6 @@ interface AppComponent {
     fun loginComponent(): LoginComponent.Factory
 
     fun inject(activity: MainActivity)
+    fun inject(activity: SettingsActivity)
+
 }
