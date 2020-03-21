@@ -18,6 +18,7 @@ package com.example.android.dagger.user
 
 import com.example.android.dagger.storage.Storage
 import javax.inject.Inject
+import javax.inject.Singleton
 
 private const val REGISTERED_USER = "registered_user"
 private const val PASSWORD_SUFFIX = "password"
@@ -31,6 +32,7 @@ private const val PASSWORD_SUFFIX = "password"
 // Dagger also knows that Storage is a dependency
 // Since Storage is an interface, we need to tell Dagger how to create an instance of that in a different way,
 // we'll cover that later.
+@Singleton
 class UserManager @Inject constructor(private val storage: Storage) {
 
     /**
