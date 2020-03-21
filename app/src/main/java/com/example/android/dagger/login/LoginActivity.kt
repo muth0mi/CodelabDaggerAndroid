@@ -66,6 +66,7 @@ class LoginActivity : AppCompatActivity() {
         findViewById<Button>(R.id.login).setOnClickListener {
             loginViewModel.login(usernameEditText.text.toString(), passwordEditText.text.toString())
         }
+
         findViewById<Button>(R.id.unregister).setOnClickListener {
             loginViewModel.unregister()
             val intent = Intent(this, RegistrationActivity::class.java)
